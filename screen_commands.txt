@@ -1,0 +1,62 @@
+*Foreground,Background Processes:
+ctrl+z:Suspends process
+bg :run suspended process in background
+fg :bring forth process added to background
+
+*Screen Session:
+Starting screen session: screen -S <Name of the screen session>
+Listing all screen session : screen -ls
+Detaching from current session: ctrl+a d
+Attach to specific session : screen -r <name/pid>
+Closing specific screensession :  screen -X -S <screen session name/pid> quit
+Killing screen session from within: ctrl+a \
+
+*Screen Window:
+Creating window within screen session: ctrl+a c
+Listing windows within screen session: ctrl+a w,ctrl+a "
+Naming window: ctrl+a A
+Killing window: ctrl+a k
+Traversing across windows: ctrl+a <num/p/n>
+
+*Split session into Panes:
+Vertical split: ctrl+a |
+Next pane: ctrl+a tab 
+
+
+*Splitted pane won't have bash session. 
+Pinning window to pane: Go to respective pane, then ctrl+a <window number>
+*Same window can be paned to multiple panes, then activities will run in parallel
+Horizontal split: ctrl+a S
+Closing the pane:ctrl+a X
+On detaching split will be erased
+
+*Locking Session
+ctrl+a x
+
+*Running Command in screen session
+screen -d -m <command> , session will terminate once command completes
+
+*Help
+ctrl+a ?
+screen command  to key binding mapping
+
+*Typing screen commands instead of keybindings:
+ctrl+a :<screen command>
+
+
+*Scrolling Session:
+ctrl+a Esc : Copy Mode
+To exit from copy mode: press Esc or q,cursor will go to the end of the session
+Scrolling: now use up-down arrows
+Selecting text to copy:Enter into Copy Mode,Scroll to starting Position
+To start Copying hit enter-> Scroll till end position and hit enter again-> Text is copied
+Pasting Copied text : ctrl+a ] (ctrl+shift+v won't work here)
+
+*Session Logging
+screen -L -S <Session Name>
+
+*Searching in Session:
+Enter into Copy Mode,(Backward Search ?<string>),(Forward Search /<screen>),
+n or p to traverse across searches (Works for block search as well)
+
+
