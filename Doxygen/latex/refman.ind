@@ -1,0 +1,23 @@
+\begin{theindex}
+
+  \item {add\+One}
+    \subitem {test\+Code.\+cpp}, \hyperpage{5}
+
+  \indexspace
+
+  \item {main}
+    \subitem {test\+Code.\+cpp}, \hyperpage{6}
+
+  \indexspace
+
+  \item {print\+Num}
+    \subitem {test\+Code.\+cpp}, \hyperpage{6}
+
+  \indexspace
+
+  \item {test\+Code.\+cpp}, \hyperpage{5}
+    \subitem {add\+One}, \hyperpage{5}
+    \subitem {main}, \hyperpage{6}
+    \subitem {print\+Num}, \hyperpage{6}
+
+\end{theindex}

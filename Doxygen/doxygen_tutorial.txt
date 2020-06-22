@@ -1,0 +1,50 @@
+#Installation 
+sudo apt install doxygen
+sudo apt install graphviz
+
+To Generate PDF Documentation(Not mandatory, around 150 MB Download)
+sudo apt install texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra
+
+#Generate Configuration file in project directory 
+doxygen -g <configFile>
+
+#Change Following parameters(For more details check config file)
+1)PROJECT_NAME : Change to your Project Name, Default is "My Project"
+2)OUTPUT_DIRECTORY : Default is current Directory
+3)EXTRACT_ALL : Default is NO, Set to YES, for genrating documentation of uncommented part as well
+4)INPUT : Source Code Directory(Leave blank for current directory, for multiple parent directories should be space separated)
+5)FILE_PATTERNS : *.h,*.cpp etc.
+6)SOURCE_BROWSER : Default is NO, Set to YES(Browse as per source code structure)
+7)INLINE_SOURCES : Default is NO,Keep it,Set to YES for including Source Code in documentation
+8)GENERATE_HTML : Default is YES
+9)GENERATE_LATEX : Default is YES, Genrates PDF, Set to NO
+
+#Commenting Style
+It is preferrrable to comment before class, function or variable
+1)Single Line Comment : /// , //!
+2)Multiline Comment : /** */, /*! */
+In case you have placed comments after function or variable 
+3)Single Line Comment : ///< , //!<
+4)Multiline Comment : /**< */, /*!< */
+5)Special tags can be used inside comments: Use @ or \ prior to them e.g. @author
+
+i)author
+ii)version
+iii)date
+iv)bug
+v)brief
+vi)warning
+vii)mainpage
+viii)copyright
+ix)section
+x)subsection
+xi)param
+xii)details
+xiii)return
+
+#Running doxygen to genrate documentation
+doxygen <configFile>
+
+#Output
+Look for index.html in html folder
+make inside latext folder to generate single pdf, refman.pdf

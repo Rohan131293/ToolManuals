@@ -1,0 +1,41 @@
+#Sublime
+
+DoxyDoxygen : https://packagecontrol.io/packages/DoxyDoxygen(For Reference)
+Tools -> Install Package Control
+Preferences -> Package Control -> Install Package -> DoxyDoxygen
+Give Some time to download and install(Check Status bar)
+
+      - '/**' + 'Enter' to generate documentation of the following definition
+      - 'Alt' + 'Q' to generate documentation of the nearest definition
+      - 'Alt' + 'Q' to wrap and/or update existing documentation
+      - 'Eol' to goto next column
+      - 'Ctrl' + 'Space' to insert snippets
+      - 'Ctrl' + 'Shift' + '[' to fold comments
+      - 'Ctrl' + 'Shift' + ']' to unfold comments
+
+
+
+#Vim
+
+DoxygenToolkit.vim : 
+
+How to install plugins in vim refer the following site:
+
+https://opensource.com/article/20/2/how-install-vim-plugins#:~:text=Install%20plugins%20manually%20(Vim%208%20and%20above)&text=When%20you%20start%20Vim%2C%20it,contained%20in%20pack%2F*%2Fstart.&text=Now%20you%20can%20place%20Vim,load%20when%20you%20launch%20Vim.
+
+You may do it manually or Use vim-plug for installing vim plugins. Follow the steps:
+1)sudo apt install vim
+2)curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+3)Create ~/.vimrc 
+4)put following text in it
+call plug#begin()
+Plug Plug 'vim-scripts/DoxygenToolkit.vim'
+call plug#end()
+5)open vim and in command mode type in 
+:PlugInstall, wait for it to download and install
+:PlugSnapshot ~/vim-plug.list, to list installed plugins
+
+*How To Use:
+Type Dox command after taking cursor to head of function
+https://www.vim.org/scripts/script.php?script_id=987(For Reference)
